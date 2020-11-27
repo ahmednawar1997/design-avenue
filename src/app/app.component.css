@@ -61,7 +61,7 @@
 
 
 .frame-image {
-  background-image: url('/assets/images/frame1.jpg');
+  background-image: url('../assets/images/frame1.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: contain;
@@ -142,15 +142,15 @@
 }
 
 .quote1 {
-  background-image: url('/assets/images/frame6.jpg');
+  background-image: url('../assets/images/frame6.jpg');
 }
 
 .quote2 {
-  background-image: url('/assets/images/frame7.jpg');
+  background-image: url('../assets/images/frame7.jpg');
 }
 
 .quote3 {
-  background-image: url('/assets/images/frame8.jpg');
+  background-image: url('../assets/images/frame8.jpg');
 }
 
 .quote-container p {
@@ -208,11 +208,11 @@ transition: ease 300ms;
 }
 
 .best-seller-img1 {
-  background-image: url('/assets/images/bestseller3.PNG');
+  background-image: url('../assets/images/bestseller3.PNG');
 }
 
 .best-seller-img2 {
-  background-image: url('/assets/images/bestseller2.PNG');
+  background-image: url('../assets/images/bestseller2.PNG');
 }
 
 .buy-btn {
@@ -272,15 +272,15 @@ transition: ease 300ms;
 }
 
 .category-men {
-  background-image: url('/assets/images/category-men2.jpg');
+  background-image: url('../assets/images/category-men2.jpg');
 }
 
 .category-women {
-  background-image: url('/assets/images/category-women1.jpg');
+  background-image: url('../assets/images/category-women1.jpg');
 }
 
 .category-kids {
-  background-image: url('/assets/images/category-kids1.jpg');
+  background-image: url('../assets/images/category-kids1.jpg');
 }
 
 .owner {
@@ -303,7 +303,7 @@ transition: ease 300ms;
   min-height: 80vh;
   border-radius: 5px;
   width: 100%;
-  background-image: url('/assets/images/heba-img.PNG');
+  background-image: url('../assets/images/heba-img.PNG');
 
 }
 
