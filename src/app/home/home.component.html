@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<div class="offers">
+    <p class="offers-header">Black Friday</p>
+    <p>Discount 20% on all frames!</p>
+</div>
+
+<div class="frame-image">
+    <p>Design Avenue</p>
+</div>
+
+<div class="our-services">
+    <div class="service1">
+        <p>Browse our collection</p>
+    </div>
+    <div class="service2">
+        <p>Make an order</p>
+    </div>
+    <div class="service3">
+        <p>Enjoy the frames</p>
+    </div>
+</div>
+
+<div class="our-quotes">
+    <div class="quote-container">
+        <div class="quote1 quote-image"></div>
+        <h3>Be innovative</h3>
+        <p>Frames can hold your deepest desires</p>
+    </div>
+    <div class="quote-container">
+        <div class="quote2 quote-image"></div>
+        <h3>Get creative</h3>
+        <p> We frame your dreams</p>
+    </div>
+    <div class="quote-container">
+        <div class="quote3 quote-image"></div>
+        <h3>Decorate your walls</h3>
+        <p>Frames can be your new mirrors</p>
+    </div>
+</div>
+
+<div class="best-sellers">
+    <h1>Our November Best Sellers</h1>
+    <div class="best-seller-container">
+
+        <div class="best-seller-item">
+            <div class="best-seller-img best-seller-img1"></div>
+            <a href="#bestseller" class="buy-btn">Buy</a>
+        </div>
+
+        <div class="best-seller-item">
+            <div class="best-seller-img best-seller-img2"></div>
+            <a href="#bestseller" class="buy-btn">Buy</a>
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <div class="categories">Frames for every room, every house and every taste</div>
+    <mat-carousel color="primary" timings="250ms ease-in" [autoplay]="true" [interval]="2000" [proportion]="40"
+        [loop]="true" [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="false" [useMouseWheel]="false"
+        orientation="ltr">
+
+        <mat-carousel-slide *ngFor="let slide of slides" [image]="slide" overlayColor="#00000040" [hideOverlay]="false"
+            #matCarouselSlide>
+        </mat-carousel-slide>
+    </mat-carousel>
+    <div class="carousel-btn">
+        <a href="#browse" class="browse-btn">Browse Frames</a></div>
+</div>
+
+<div class="owner">
+    <div class="owner-info">
+        <h1>Design Avenue Owner</h1>
+        <p>Hello, I'm Heba, a Business adminstration graduate and a marketing enthusiast who believes frames can
+            change
+            moods and build dreams.</p>
+    </div>
+    <div class="owner-img">
+
+    </div>
+</div>
+
+<div class="footer">
+    <div><a href="https://www.instagram.com/designnavenue/?hl=en"><i class="fab fa-instagram fa-2x"></i></a></div>
+    <div><a href="#facebook"><i class="fab fa-facebook-square fa-2x"></i></a></div>
+
+    <div class="newsletter"><a href=""><i class="fas fa-newspaper fa-2x"></i></a></div>
+
+</div>
