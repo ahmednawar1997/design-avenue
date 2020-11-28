@@ -10,13 +10,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ColorPickerModule } from 'ngx-color-picker';
 
 
-
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomDesignComponent } from './custom-design/custom-design.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BrowseComponent } from './browse/browse.component';
+import { FiltersComponent } from './filters/filters.component';
 
 
 @NgModule({
@@ -24,7 +24,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     CustomDesignComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    BrowseComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,

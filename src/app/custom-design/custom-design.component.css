@@ -89,8 +89,9 @@
   border: 17px solid rgb(73, 52, 12);
   border-radius: 8px;
   box-shadow: inset 0px 0px 9px 4px rgba(44, 44, 44, 0.75), -15px 15px 8px -5px rgba(92, 92, 92, 0.75);
+
   background: rgb(145, 145, 185);
-  border-image: url('./../../assets/images/wood2.jpg') 10 round;
+  border-image: url('./../../assets/images/wood3.jpg') 30 round;
   margin: 0 10%;
 }
 

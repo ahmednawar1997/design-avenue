@@ -46,7 +46,7 @@ export class CustomDesignComponent implements OnInit {
 
   @Input()
   set borderColor(val: any) {
-    this._borderColor = val.toString() + '7a';
+    this._borderColor = val.toString() + 'ba';
   }
 
   selectFont = (font: string) => {

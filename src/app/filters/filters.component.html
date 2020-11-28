@@ -1,0 +1,13 @@
+<div class="main-filters">
+    <div class="filters-cont">
+        <div class="dropdown" *ngFor="let filter of filters; let indx=index;" [ngClass]="{selected:filter.selected.length>0}">
+            <span class=" dropdown-title">{{filter.selected.length>0?filter.selected:filter.title}}</span>
+            <div class="dropdown-content">
+                <div class="dropdown-item" *ngFor="let option of filter.options" (click)="selectOption(indx, option)"
+                    [ngClass]="{selected: option==filter.selected}">
+                    {{option}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
