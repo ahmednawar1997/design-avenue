@@ -1,3 +1,64 @@
-<div>
-    
+<div class="main">
+    <div class="header-container">
+        <h2 class="header">Customise Your Frame</h2>
+
+        <blockquote class="blockquote">
+            <p>"We believe that your frames represents yourself, if you have a good frame, you don't need a
+                mirror"</p>
+        </blockquote>
+
+    </div>
+    <div class="customise">
+        <div class="filters">
+            <h3 class="filter-header">Customise</h3>
+            <form class="customise-form">
+                <h5>Frame Width</h5>
+                <mat-slider min="10" max="35" step="01" [(ngModel)]="borderWidth" class="my-form-field"
+                    name="borderWidth" thumbLabel>
+                </mat-slider>
+
+
+
+                <h5>Text Size</h5>
+                <mat-slider min="10" max="120" step="01" [(ngModel)]="textSize" name="textSize" class="my-form-field"
+                    thumbLabel>
+                </mat-slider>
+
+                <h5>Background Color</h5>
+                <input [(colorPicker)]="background" [style.background]="background" class="my-form-field" />
+
+                <h5>Text Color</h5>
+                <input [(colorPicker)]="textColor" [style.background]="textColor" class="my-form-field" />
+
+
+                <h5>Frame Color</h5>
+                <input [(colorPicker)]="borderColor" [style.background]="borderColor" [cpPresetColors]="borderColors"
+                    class="my-form-field" [cpOutputFormat]="'hex'" />
+
+                <h5>Text</h5>
+
+                <input matInput type="text" [(ngModel)]="frameText" name="frameText" class="my-form-field" />
+
+
+                <h5>Text Font</h5>
+
+                <button class="my-form-field font-btn" [matMenuTriggerFor]="menu">{{textFont}}</button>
+                <mat-menu #menu="matMenu">
+                    <button *ngFor="let textFont of textFonts" mat-menu-item
+                        (click)="selectFont(textFont)">{{textFont}}</button>
+                </mat-menu>
+                <h5>Background Image</h5>
+                <input type='file' (change)="onSelectFile($event)" class="my-form-field">
+
+            </form>
+
+        </div>
+        <div class="frame" [ngStyle]="setbackgroundImage()" [style.border-width]="borderWidth+'px'">
+            <div class="border-filter" [style.border-width]="borderWidth+'px'" [style.border-color]="borderColor"
+                [style.top]="'-'+borderWidth+'px'" [style.right]="'-'+borderWidth+'px'"></div>
+
+            <div class="frame-text" [style.color]="textColor" [style.font-size]="textSize+'px'"
+                [style.font-family]="textFont">{{frameText}}</div>
+        </div>
+    </div>
 </div>
