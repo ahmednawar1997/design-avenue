@@ -10,9 +10,9 @@ export class HomeComponent implements OnInit {
 
   constructor() {
     this.slides = [];
-    this.slides.push('../assets/images/category-men2.jpg');
-    this.slides.push('../assets/images/category-women1.jpg');
-    this.slides.push('../assets/images/category-kids1.jpg');
+    this.slides.push('./../assets/images/category-men2.jpg');
+    this.slides.push('./../assets/images/category-women1.jpg');
+    this.slides.push('./../assets/images/category-kids1.jpg');
 
   }
   ngOnInit(): void {
