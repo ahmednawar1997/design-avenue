@@ -16,9 +16,10 @@
   justify-content: center;
   width: 100%;
   overflow: hidden;
+  flex-wrap: wrap;
   background-color: rgb(250, 250, 250);
   color: rgb(136, 136, 136);
-  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 5px -2px rgba(0, 0, 0, .2);
   z-index: 5;
 }
 
@@ -37,5 +38,12 @@
   background-color: black;
   background-position: 0 100%;
   color: white;
+
+}
+
+@media (max-width: 800px) {
+  #navbar {
+    position: static;
+  }
 
 }

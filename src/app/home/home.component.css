@@ -35,11 +35,10 @@
   font-size: 100px;
 }
 
-.frame-image p{    /* box-shadow: inset 0px 0px 9px 4px rgba(44, 44, 44, 0.75), -3px -3px 2px rgba(255,255,255,0.3), 5px 5px 5px rgba(0,0,0,0.2), 15px 15px 15px rgba(0,0,0,0.2); */
-
-  filter: drop-shadow(-3px -3px 2px rgba(255,255,255,0.3))
-  drop-shadow(5px 5px 5px rgba(0,0,0,0.3))
-  drop-shadow(15px 15px 15px rgba(0,0,0,0.2))
+.frame-image p {
+  /* box-shadow: inset 0px 0px 9px 4px rgba(44, 44, 44, 0.75), -3px -3px 2px rgba(255,255,255,0.3), 5px 5px 5px rgba(0,0,0,0.2), 15px 15px 15px rgba(0,0,0,0.2); */
+  text-align: center;
+  filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.3)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3)) drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2))
 }
 
 
@@ -318,5 +317,7 @@ h3 {
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 800px) {
-
+  .our-quotes, .best-seller-container{
+    flex-direction: column;
+  }
 }
