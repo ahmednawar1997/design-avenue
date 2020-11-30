@@ -18,6 +18,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrowseComponent } from './browse/browse.component';
 import { FiltersComponent } from './filters/filters.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { ViewProductComponent } from './view-product/view-product.component';
     NavbarComponent,
     BrowseComponent,
     FiltersComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    AboutComponent,
+    FooterComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,

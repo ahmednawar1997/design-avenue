@@ -1,0 +1,38 @@
+.owner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #fcfcfc;
+  margin: 20px;
+  border: 5px solid black;
+  /* background: -webkit-linear-gradient(left, black 50%, white 0%); */
+}
+
+
+.owner-img {
+  flex: 1;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  border-radius: 5px;
+  width: 100%;
+  background-image: url('../../assets/images/heba-img.PNG');
+
+}
+
+.owner-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(83, 83, 83);
+  padding: 20px;
+}
+
+.owner-info p {
+  text-align: center
+}

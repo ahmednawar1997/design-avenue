@@ -6,6 +6,8 @@ import { BrowseComponent } from './../browse/browse.component';
 import { HomeComponent } from './../home/home.component';
 import { CustomDesignComponent } from './../custom-design/custom-design.component';
 import { ViewProductComponent } from './../view-product/view-product.component';
+import { AboutComponent } from './../about/about.component';
+
 
 
 
@@ -30,6 +32,10 @@ const routes: Routes = [
   {
     path: 'filters',
     component: FiltersComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
   },
 ];
 
