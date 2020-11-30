@@ -21,6 +21,8 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { CartComponent } from './cart/cart.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { ReviewsComponent } from './reviews/reviews.component';
     ViewProductComponent,
     AboutComponent,
     FooterComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    CartComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
