@@ -1,0 +1,58 @@
+<div class="main-cont">
+    <div class="image-viewer-cont">
+        <ngx-image-viewer [src]="[item.imageUrl]" [config]="config"></ngx-image-viewer>
+    </div>
+    <div class="product-details-cont">
+        <div class="product-title">
+            <div class="product-name">{{item.title}}</div>
+            <div class="product-price">{{item.price}} EGP</div>
+        </div>
+        <div class="product-description">
+            <div class="product-description-title">Product description</div>
+            <div class="product-description-content">{{item.description}}</div>
+        </div>
+
+        <div class="product-options">
+
+            <div class="dropdown">
+                <span class="dropdown-title">{{sizeSelected!==''?sizeSelected+' inches':'Size'}}</span>
+                <div class="dropdown-content">
+                    <div class="dropdown-item" (click)="selectSize('20')" [ngClass]="{selected: '20'==sizeSelected}">
+                        20 inches
+                    </div>
+                    <div class="dropdown-item" (click)="selectSize('22')" [ngClass]="{selected: '22'==sizeSelected}">
+                        22 inches
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <span class="dropdown-title">{{colorSelected!==''?colorSelected:'Color'}}</span>
+                <div class="dropdown-content">
+                    <div class="dropdown-item" (click)="selectColor('Brown')"
+                        [ngClass]="{selected: 'Brown'==colorSelected}">
+                        Brown
+                    </div>
+                    <div class="dropdown-item" (click)="selectColor('Black')"
+                        [ngClass]="{selected: 'Black'==colorSelected}">
+                        Black
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dropdown add-to-cart-title">
+            <span class="dropdown-title">Add to cart</span>
+        </div>
+
+        <div class="additional-info">
+            Delivery within 2 - 4 days
+        </div>
+        <hr>
+        <div class="additional-info">
+            If you want to ask any questions we are happy to help
+        </div>
+
+    </div>
+</div>

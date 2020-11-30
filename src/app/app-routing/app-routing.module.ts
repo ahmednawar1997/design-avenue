@@ -1,9 +1,13 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
 import { FiltersComponent } from './../filters/filters.component';
 import { BrowseComponent } from './../browse/browse.component';
 import { HomeComponent } from './../home/home.component';
 import { CustomDesignComponent } from './../custom-design/custom-design.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ViewProductComponent } from './../view-product/view-product.component';
+
+
 
 const routes: Routes = [
   {
@@ -18,6 +22,10 @@ const routes: Routes = [
   {
     path: 'browse',
     component: BrowseComponent,
+  },
+  {
+    path: 'browse/:id',
+    component: ViewProductComponent
   },
   {
     path: 'filters',

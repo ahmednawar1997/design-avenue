@@ -1,0 +1,118 @@
+.main-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 40px;
+}
+
+.image-viewer-cont {
+  /* width: 100%; */
+  flex-basis: 45%;
+}
+
+.product-details-cont {
+  padding: 20px 90px;
+  background: #f3f3f3;
+  margin: 0 30px;
+}
+
+.product-title {
+  font-family: 'Cormorant', serif;
+  font-size: 40px;
+  display: flex;
+}
+
+.product-price {
+  margin-left: 40px;
+}
+
+.product-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  padding: 20px 15px;
+  margin: 20px 0;
+}
+
+.product-description-title {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.product-description-content {
+  margin: 20px 5px;
+}
+
+.product-options {
+  display: flex;
+}
+
+.product-options div {
+  flex: 1;
+}
+
+
+.dropdown {
+  padding: 10px;
+  position: relative;
+  display: block;
+  margin: 10px 15px;
+  border: 1px solid black;
+  border-radius: 1px;
+  transition: ease 200ms;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 0;
+  font-size: 12px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover {
+  display: block;
+  background: #000000;
+  color: white;
+}
+
+
+.dropdown-item {
+  padding: 10px;
+  border-bottom: 1px solid rgba(184, 184, 184, 0.726);
+  color: rgb(58, 58, 58);
+}
+
+.dropdown-item:hover {
+  background: #dfdfdf;
+  cursor: pointer;
+}
+
+.selected {
+  background: #dfdfdf;
+
+}
+
+.dropdown-title {
+  font-size: 13px;
+}
+
+.add-to-cart-title {
+  text-align: center;
+  cursor: pointer;
+}
+
+.additional-info {
+  margin: 20px 20px;
+  color: #6e6e6e;
+  font-size: 13px;
+}

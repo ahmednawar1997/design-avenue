@@ -6,8 +6,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { ColorPickerModule } from 'ngx-color-picker';
+import { ImageViewerModule } from "ngx-image-viewer";
 
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowseComponent } from './browse/browse.component';
 import { FiltersComponent } from './filters/filters.component';
+import { ViewProductComponent } from './view-product/view-product.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FiltersComponent } from './filters/filters.component';
     HomeComponent,
     NavbarComponent,
     BrowseComponent,
-    FiltersComponent
+    FiltersComponent,
+    ViewProductComponent
   ],
   imports: [
     BrowserModule,
@@ -37,8 +39,8 @@ import { FiltersComponent } from './filters/filters.component';
     MatSliderModule,
     MatInputModule,
     MatMenuModule,
-    MatFormFieldModule,
-    ColorPickerModule
+    ColorPickerModule,
+    ImageViewerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

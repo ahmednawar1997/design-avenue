@@ -1,4 +1,4 @@
-import { IfStmt } from '@angular/compiler';
+import { Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 import * as service from './browse.service';
 
@@ -12,7 +12,7 @@ export class BrowseComponent implements OnInit {
   items: Array<any>;
   itemsPerRow: number;
   @Input() filters: Array<any>;
-  constructor() {
+  constructor(private router: Router) {
 
     this.items = service.getFrames();
     this.itemsPerRow = 3;
@@ -31,7 +31,6 @@ export class BrowseComponent implements OnInit {
   }
 
   applyFilters = () => {
-    console.log('filter')
     for (const item of this.items) {
       let flag = true;
       for (const filter of this.filters) {
@@ -45,5 +44,10 @@ export class BrowseComponent implements OnInit {
       }
       item.isShown = flag;
     }
+  }
+
+
+  redirectViewPage = (id: number) => {
+    this.router.navigateByUrl(this.router.url + '/' + id);
   }
 }
