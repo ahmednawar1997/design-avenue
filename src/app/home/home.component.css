@@ -145,7 +145,7 @@ h3 {
   align-items: center;
   /* width: 100%; */
   /* height: 70vh; */
-  padding: 30px;
+  width: 100%;
 }
 
 .best-seller-item {
@@ -155,6 +155,7 @@ h3 {
   align-items: center;
   /* height: 100%; */
   flex: 1;
+  width: 100%;
 }
 
 .best-seller-img {
@@ -165,7 +166,7 @@ h3 {
   background-repeat: no-repeat;
   margin: 20px;
   min-height: 400px;
-  width: 400px;
+  width: 80%;
   border-radius: 5px;
   transition: ease 300ms;
 }
@@ -291,7 +292,7 @@ h3 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgb(185, 185, 185);
+  background-color: rgb(235, 235, 235);
   padding: 30px;
 }
 
@@ -300,7 +301,7 @@ h3 {
 }
 
 .footer div a {
-  color: white;
+  color: rgb(179, 179, 179);
 
 }
 
@@ -315,9 +316,50 @@ h3 {
   padding: 10px;
 }
 
+.our-collection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.our-collection div {
+  flex: 1;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-collection div:hover {
+  opacity: 0.9;
+}
+
+
+.wallsets {
+  background-image: url('https://images.unsplash.com/photo-1583766432455-7096057dbee3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80');
+
+}
+
+.art {
+  background-image: url('https://images.unsplash.com/photo-1569084024058-1632922a4e1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=661&q=80');
+}
+
+.frames {
+  background-image: url('https://images.unsplash.com/photo-1587798074130-015f7eb202ed?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1049&q=80');
+}
+
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 800px) {
-  .our-quotes, .best-seller-container{
+
+  .our-quotes,
+  .best-seller-container {
     flex-direction: column;
   }
 }

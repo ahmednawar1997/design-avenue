@@ -3,19 +3,19 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
-  padding: 40px;
+  padding: 20px;
 }
 
 .image-viewer-cont {
   /* width: 100%; */
   flex-basis: 45%;
+  margin: 10px;
 }
 
 .product-details-cont {
   padding: 20px 90px;
   background: #f3f3f3;
-  margin: 0 30px;
+  margin: 10px 40px;
 }
 
 .product-title {
@@ -115,4 +115,12 @@
   margin: 20px 20px;
   color: #6e6e6e;
   font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+  .main-cont {
+    flex-direction: column;
+  }
+
+
 }
