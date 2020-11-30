@@ -6,6 +6,21 @@
   color: rgb(0, 0, 0);
   font-family: 'Dancing Script', cursive;
   z-index: 5;
+  margin: auto;
+}
+
+.hidden-element {
+  visibility: hidden;
+}
+
+.navbar-cart {
+  margin-left: auto;
+  padding: 20px;
+  color: rgb(204, 204, 204);
+}
+
+.navbar-cart:hover {
+  color: rgb(179, 179, 179);
 }
 
 #navbar {

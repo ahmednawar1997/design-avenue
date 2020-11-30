@@ -6,6 +6,9 @@
   background-color: rgb(245, 245, 245);
   padding: 30px;
 }
+a{
+  text-decoration: none;
+}
 
 .footer div {
   flex: 1;
