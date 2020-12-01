@@ -116,6 +116,9 @@
   color: #6e6e6e;
   font-size: 13px;
 }
+.message{
+  color: #000000;
+}
 
 @media (max-width: 1000px) {
   .main-cont {

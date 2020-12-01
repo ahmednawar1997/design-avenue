@@ -39,6 +39,9 @@
         <div class="dropdown add-to-cart-title" (click)=addOneItem()>
             <span class="dropdown-title">Add to cart</span>
         </div>
+        <div class="message additional-info" *ngIf="message!==''">
+            {{message}}
+        </div>
 
         <div class="additional-info">
             Delivery within 2 - 4 days

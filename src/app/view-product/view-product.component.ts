@@ -16,6 +16,7 @@ export class ViewProductComponent implements OnInit {
 
   sizeSelected = '';
   colorSelected = '';
+  message = '';
 
   constructor(private route: ActivatedRoute, private cartService: CartService, private productService: ProductService) { }
 
@@ -46,6 +47,11 @@ export class ViewProductComponent implements OnInit {
   }
 
   addOneItem = () => {
+    if (this.colorSelected === '' || this.sizeSelected === '') {
+      this.message = 'You have to choose a color and a size';
+      return;
+    }
+
     const itemToAdd = {
       ...this.item,
       colorSelected: this.colorSelected,
@@ -54,5 +60,6 @@ export class ViewProductComponent implements OnInit {
     };
 
     this.cartService.addOneItem(itemToAdd);
+    this.message = 'Added to cart';
   }
 }

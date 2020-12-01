@@ -32,7 +32,6 @@ export class CartComponent implements OnInit {
   }
 
   removeFromCart = (item: any) => {
-
     this.cartService.removeOneItem(item);
   }
 
