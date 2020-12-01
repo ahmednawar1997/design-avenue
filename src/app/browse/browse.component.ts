@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
-import * as service from './browse.service';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-browse',
@@ -12,11 +12,11 @@ export class BrowseComponent implements OnInit {
   items: Array<any>;
   itemsPerRow: number;
   @Input() filters: Array<any>;
-  constructor(private router: Router) {
+  constructor(private router: Router, private productService: ProductService) {
 
-    this.items = service.getFrames();
+    this.items = this.productService.getFrames();
     this.itemsPerRow = 3;
-    this.filters = service.getFilters();
+    this.filters = this.productService.getFilters();
   }
 
   ngOnInit(): void {

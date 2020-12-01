@@ -1,6 +1,6 @@
+import { ProductService } from './../product.service';
 import { CartService } from './../cart.service';
 import { Component, OnInit } from '@angular/core';
-import * as service from '../browse/browse.service';
 
 
 @Component({
@@ -15,14 +15,16 @@ export class CartComponent implements OnInit {
 
   totalPrice!: number;
 
-  constructor(private cartService: CartService) {
-    this.items = service.getFrames();
+  constructor(private cartService: CartService, private productService: ProductService) {
+    this.items = this.productService.getFrames();
     this.itemsInCart = [];
   }
 
   ngOnInit(): void {
     this.itemsInCart = this.cartService.items;
     this.cartService.itemsChanged.subscribe(items => this.itemsInCart = items);
+    this.totalPrice = this.itemsInCart.reduce((sum, currentItem) => sum + Number(currentItem.price), 0);
+    console.log(this.totalPrice)
   }
 
   addToCart = (item: any) => {

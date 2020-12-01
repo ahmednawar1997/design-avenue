@@ -25,6 +25,8 @@ import { CartComponent } from './cart/cart.component';
 import { AdminComponent } from './admin/admin.component';
 
 import { CartService } from './cart.service';
+import { ProductService } from './product.service';
+
 
 
 @NgModule({
@@ -54,7 +56,7 @@ import { CartService } from './cart.service';
     ColorPickerModule,
     ImageViewerModule.forRoot()
   ],
-  providers: [CartService],
+  providers: [CartService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

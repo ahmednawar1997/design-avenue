@@ -1,7 +1,7 @@
+import { ProductService } from './../product.service';
 import { CartService } from './../cart.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as service from '../browse/browse.service';
 
 @Component({
   selector: 'app-view-product',
@@ -17,11 +17,11 @@ export class ViewProductComponent implements OnInit {
   sizeSelected = '';
   colorSelected = '';
 
-  constructor(private route: ActivatedRoute, private cartService: CartService) { }
+  constructor(private route: ActivatedRoute, private cartService: CartService, private productService: ProductService) { }
 
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
-    this.item = service.getFrames()[this.id];
+    this.item = this.productService.getFrames()[this.id];
     console.log(this.item);
     this.items = ['https://images.unsplash.com/photo-1497296690583-da0e2a4ce49a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       'https://images.unsplash.com/photo-1488813340362-2a31b5522ebe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
