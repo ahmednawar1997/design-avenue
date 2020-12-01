@@ -120,3 +120,7 @@
 .order-btn:hover a {
   color: white;
 }
+
+.cart-item-buttons a:nth-child(odd):hover {
+  cursor: pointer;
+}

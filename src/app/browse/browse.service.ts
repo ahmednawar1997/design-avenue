@@ -4,7 +4,8 @@ export const getFrames = () => {
         title: 'Wooden brown frame',
         price: '120',
         material: 'Wood',
-        color: 'Brown',
+        colors: ['Brown', 'Black'],
+        sizes: ['20', '22'],
         description: 'This is our best selling frame', size: '20', category: 'Frame',
         isShown: true,
         tags: ['wood', 'brown', 'frame', '20 inches', '50 - 100 egp']
@@ -15,7 +16,8 @@ export const getFrames = () => {
         title: 'Wooden black frame',
         price: '70',
         material: 'Wood',
-        color: 'Black',
+        colors: ['Brown', 'Black'],
+        sizes: ['20', '22'],
         isShown: true,
         description: 'This is our most popular frame', size: '20', category: 'frame',
         tags: ['wood', 'black', 'frame', '22 inches', '100 - 150 egp']

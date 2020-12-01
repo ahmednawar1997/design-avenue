@@ -98,5 +98,12 @@ a {
   .product-item {
     margin: 10px;
   }
+  .product-list{
+    flex-direction: column;
+  }
+  .product-item-cont{
+    flex-basis: 100%!important;
+    max-width: 100%!important;
+  }
 
 }

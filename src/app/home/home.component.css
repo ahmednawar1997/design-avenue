@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&display=swap');
+
 .offers {
   display: flex;
   flex-direction: column;
@@ -134,8 +136,8 @@ h3 {
 }
 
 .best-sellers h1 {
-  color: rgb(109, 82, 59);
-  font-family: 'Castoro', serif;
+  font-family: 'Amiri', serif;
+  color: rgb(96 53 17);
 }
 
 .best-seller-container {
@@ -314,7 +316,8 @@ h3 {
 @media (max-width: 800px) {
 
   .our-quotes,
-  .best-seller-container {
+  .best-seller-container,
+  .our-collection {
     flex-direction: column;
   }
 }

@@ -1,6 +1,6 @@
 <div class="main-cont">
     <div class="image-viewer-cont">
-        <ngx-image-viewer [src]="[item.imageUrl]" [config]="config"></ngx-image-viewer>
+        <ngx-image-viewer [src]="[item.imageUrl]" [config]="imageViewerConfig"></ngx-image-viewer>
     </div>
     <div class="product-details-cont">
         <div class="product-title">
@@ -17,11 +17,9 @@
             <div class="dropdown">
                 <span class="dropdown-title">{{sizeSelected!==''?sizeSelected+' inches':'Size'}}</span>
                 <div class="dropdown-content">
-                    <div class="dropdown-item" (click)="selectSize('20')" [ngClass]="{selected: '20'==sizeSelected}">
-                        20 inches
-                    </div>
-                    <div class="dropdown-item" (click)="selectSize('22')" [ngClass]="{selected: '22'==sizeSelected}">
-                        22 inches
+                    <div class="dropdown-item" (click)="selectSize('20')" [ngClass]="{selected: size==sizeSelected}"
+                        *ngFor="let size of item.sizes">
+                        {{size}} inches
                     </div>
                 </div>
             </div>
@@ -29,20 +27,16 @@
             <div class="dropdown">
                 <span class="dropdown-title">{{colorSelected!==''?colorSelected:'Color'}}</span>
                 <div class="dropdown-content">
-                    <div class="dropdown-item" (click)="selectColor('Brown')"
-                        [ngClass]="{selected: 'Brown'==colorSelected}">
-                        Brown
-                    </div>
-                    <div class="dropdown-item" (click)="selectColor('Black')"
-                        [ngClass]="{selected: 'Black'==colorSelected}">
-                        Black
+                    <div class="dropdown-item" (click)="selectColor(color)" [ngClass]="{selected: color==colorSelected}"
+                        *ngFor="let color of item.colors">
+                        {{color}}
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="dropdown add-to-cart-title">
+        <div class="dropdown add-to-cart-title" (click)=addOneItem()>
             <span class="dropdown-title">Add to cart</span>
         </div>
 

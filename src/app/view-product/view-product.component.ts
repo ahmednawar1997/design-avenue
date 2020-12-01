@@ -1,3 +1,4 @@
+import { CartService } from './../cart.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as service from '../browse/browse.service';
@@ -11,12 +12,12 @@ export class ViewProductComponent implements OnInit {
   id!: number | null;
   item!: any;
   items!: Array<string>;
-  config = { btnShow: { rotateClockwise: false, rotateCounterClockwise: false } };
+  imageViewerConfig = { btnShow: { rotateClockwise: false, rotateCounterClockwise: false } };
 
   sizeSelected = '';
   colorSelected = '';
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
@@ -42,5 +43,16 @@ export class ViewProductComponent implements OnInit {
       this.colorSelected = '';
     }
     this.colorSelected = color;
+  }
+
+  addOneItem = () => {
+    const itemToAdd = {
+      ...this.item,
+      colorSelected: this.colorSelected,
+      sizeSelected: this.sizeSelected,
+      number: 0
+    };
+
+    this.cartService.addOneItem(itemToAdd);
   }
 }

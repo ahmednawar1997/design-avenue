@@ -7,7 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { ColorPickerModule } from 'ngx-color-picker';
-import { ImageViewerModule } from "ngx-image-viewer";
+import { ImageViewerModule } from 'ngx-image-viewer';
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +23,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { CartComponent } from './cart/cart.component';
 import { AdminComponent } from './admin/admin.component';
+
+import { CartService } from './cart.service';
 
 
 @NgModule({
@@ -52,7 +54,7 @@ import { AdminComponent } from './admin/admin.component';
     ColorPickerModule,
     ImageViewerModule.forRoot()
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

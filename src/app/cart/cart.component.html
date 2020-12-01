@@ -1,61 +1,35 @@
 <div class="main-cont">
-    <div class="cart-header"><a href=""><i class="fas fa-shopping-bag fa-6x"></i></a></div>
+    <div class="cart-header"><a><i class="fas fa-shopping-bag fa-5x"></i></a></div>
     <div class="cart-content">
-        <div class="cart-item">
+
+
+        <div class="cart-item" *ngFor="let item of itemsInCart;let indx = index">
             <div class="cart-item-image-cont"><img class="cart-item-image"
-                    src="https://images.unsplash.com/photo-1529254479751-faeedc59e78f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=282&q=80"
+                    src="{{item.imageUrl}}"
                     alt=""></div>
             <div class="cart-item-info-cont">
-                <div class="cart-item-info-title">Best selling wooden frame</div>
-                <div class="cart-item-info">Brown</div>
-                <div class="cart-item-info">20 x 30</div>
+                <div class="cart-item-info-title">{{item.title}}</div>
+                <div class="cart-item-info">{{item.colorSelected}}</div>
+                <div class="cart-item-info">{{item.sizeSelected}}</div>
             </div>
-            <div class="cart-item-price">120 EGP</div>
+            <div class="cart-item-price">{{item.price}}</div>
             <div class="cart-item-buttons">
-                <a href=""><i class="fas fa-minus"></i></a>
-                <a href="">1</a>
-                <a href=""><i class="fas fa-plus"></i></a>
-            </div>
-        </div>
-        <div class="cart-item">
-            <div class="cart-item-image-cont"><img class="cart-item-image"
-                    src="https://images.unsplash.com/photo-1529254479751-faeedc59e78f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=282&q=80"
-                    alt=""></div>
-            <div class="cart-item-info-cont">
-                <div class="cart-item-info-title">Best selling wooden frame</div>
-                <div class="cart-item-info">Brown</div>
-                <div class="cart-item-info">20 x 30</div>
-            </div>
-            <div class="cart-item-price">120 EGP</div>
-            <div class="cart-item-buttons">
-                <a href=""><i class="fas fa-minus"></i></a>
-                <a href="">1</a>
-                <a href=""><i class="fas fa-plus"></i></a>
-            </div>
-        </div>
-        <div class="cart-item">
-            <div class="cart-item-image-cont"><img class="cart-item-image"
-                    src="https://images.unsplash.com/photo-1529254479751-faeedc59e78f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=282&q=80"
-                    alt=""></div>
-            <div class="cart-item-info-cont">
-                <div class="cart-item-info-title">Best selling wooden frame</div>
-                <div class="cart-item-info">Brown</div>
-                <div class="cart-item-info">20 x 30</div>
-            </div>
-            <div class="cart-item-price">120 EGP</div>
-            <div class="cart-item-buttons">
-                <a href=""><i class="fas fa-minus"></i></a>
-                <a href="">1</a>
-                <a href=""><i class="fas fa-plus"></i></a>
+                <a (click)="removeFromCart(item)"><i class="fas fa-minus"></i></a>
+                <a>{{item.number}}</a>
+                <a (click)="addToCart(item)"><i class="fas fa-plus"></i></a>
             </div>
         </div>
 
 
-        <div class="cart-total">
+        <div class="cart-total" *ngIf="itemsInCart.length!==0">
             <div class="cart-total-price">
                 Total Price: 360 EGP
             </div>
             <div class="order-btn"><a href="">Order Now</a></div>
+        </div>
+
+        <div *ngIf="itemsInCart.length===0">
+            No items in cart
         </div>
     </div>
 </div>
