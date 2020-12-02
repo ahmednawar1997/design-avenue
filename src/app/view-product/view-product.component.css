@@ -124,6 +124,11 @@
   .main-cont {
     flex-direction: column;
   }
+  .product-details-cont{
+    padding: 20px 20px;
+    background: #f3f3f3;
+    margin: 10px 20px;
+  }
 
 
 }

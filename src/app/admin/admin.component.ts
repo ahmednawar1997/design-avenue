@@ -1,3 +1,4 @@
+import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+  products!: Array<any>;
 
-  constructor() { }
+  constructor(private productService: ProductService) {
+  }
 
   ngOnInit(): void {
+    this.products = this.productService.getFrames();
   }
+
+  editProduct = (index: number) => {
+
+  }
+
+  removeProduct = (index: number) => {
+    this.productService.removeProduct(index);
+  }
+
 
 }

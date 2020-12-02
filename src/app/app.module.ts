@@ -26,6 +26,7 @@ import { AdminComponent } from './admin/admin.component';
 
 import { CartService } from './cart.service';
 import { ProductService } from './product.service';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 
 
@@ -42,7 +43,8 @@ import { ProductService } from './product.service';
     FooterComponent,
     ReviewsComponent,
     CartComponent,
-    AdminComponent
+    AdminComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,7 @@
             <div class="dropdown">
                 <span class="dropdown-title">{{sizeSelected!==''?sizeSelected+' inches':'Size'}}</span>
                 <div class="dropdown-content">
-                    <div class="dropdown-item" (click)="selectSize('20')" [ngClass]="{selected: size==sizeSelected}"
+                    <div class="dropdown-item" (click)="selectSize(size)" [ngClass]="{selected: size==sizeSelected}"
                         *ngFor="let size of item.sizes">
                         {{size}} inches
                     </div>

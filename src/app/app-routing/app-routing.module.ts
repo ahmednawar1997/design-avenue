@@ -1,3 +1,5 @@
+import { EditProductComponent } from './../edit-product/edit-product.component';
+import { AdminComponent } from './../admin/admin.component';
 import { CartComponent } from './../cart/cart.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -21,7 +23,6 @@ const routes: Routes = [
     path: 'custom-design',
     component: CustomDesignComponent,
   },
-
   {
     path: 'browse',
     component: BrowseComponent,
@@ -37,6 +38,14 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+  },
+  {
+    path: 'admin/edit/:id',
+    component: EditProductComponent,
   },
 ];
 

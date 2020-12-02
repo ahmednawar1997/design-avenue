@@ -34,7 +34,7 @@ export class ProductService {
     };
     const items = [item, item2, item, item2, item, item2, item, item2];
     return items;
-  };
+  }
 
   getFilters = () => {
     const filters = [
@@ -67,6 +67,10 @@ export class ProductService {
     ];
 
     return filters;
+  }
+
+  removeProduct = (index: number) => {
+    console.log('remove from database');
   }
 
 }

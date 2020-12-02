@@ -1,0 +1,29 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.main-cont {
+  width: 100%;
+}
+
+
+.jumbotron h3,
+.jumbotron p {
+  text-align: center;
+  margin: 20px 20px;
+}
+
+.form-cont {
+  margin: 10px 0;
+}
+
+.view-products-table-image {
+  max-height: 50px;
+}
+
+.view-products-cont {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+td a{
+  margin: 0 10px;
+  cursor: pointer;
+}
