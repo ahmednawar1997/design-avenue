@@ -28,8 +28,8 @@
                             <td>{{product.category}}</td>
                             <td>{{product.price}}</td>
                             <td><img class="view-products-table-image" src="{{product.imageUrl}}"></td>
-                            <td><a routerLink="./edit/{{indx}}"><i class="fas fa-edit"></i></a>
-                                <a (click)="removeProduct(indx)"><i class="fas fa-trash"></i></a>
+                            <td><a routerLink="./edit/{{product.id}}"><i class="fas fa-edit"></i></a>
+                                <a (click)="removeProduct(product.id)"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     </tbody>

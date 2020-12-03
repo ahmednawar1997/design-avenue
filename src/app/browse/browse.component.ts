@@ -20,6 +20,9 @@ export class BrowseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.productService.fetchProducts().subscribe((data) => {
+      console.log(data);
+    });
   }
 
   rowNum = () => {

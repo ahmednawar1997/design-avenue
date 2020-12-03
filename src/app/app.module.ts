@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
@@ -56,7 +57,8 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     MatInputModule,
     MatMenuModule,
     ColorPickerModule,
-    ImageViewerModule.forRoot()
+    ImageViewerModule.forRoot(),
+    HttpClientModule
   ],
   providers: [CartService, ProductService],
   bootstrap: [AppComponent]
