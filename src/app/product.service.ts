@@ -88,7 +88,7 @@ export class ProductService {
 
 
   removeProduct = (id: any) => {
-    return this.http.post<any>('http://localhost:3000/api/products/remove', {id}).pipe(catchError(this.errorHandler));;
+    return this.http.post<any>('http://localhost:3000/api/products/remove', { id }).pipe(catchError(this.errorHandler));;
   }
 
   editProduct = (product: any) => {
@@ -104,8 +104,8 @@ export class ProductService {
       // The backend returned an unsuccessful response code.
       // The response body may contain clues as to what went wrong,
       console.error(
-        `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
+        `Backend returned code ${error.status}`);
+      console.error(error.error);
     }
     // return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');

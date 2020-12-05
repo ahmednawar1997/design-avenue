@@ -1,15 +1,16 @@
+import { LoginComponent } from './../login/login.component';
 import { EditProductComponent } from './../edit-product/edit-product.component';
 import { AdminComponent } from './../admin/admin.component';
 import { CartComponent } from './../cart/cart.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { FiltersComponent } from './../filters/filters.component';
 import { BrowseComponent } from './../browse/browse.component';
 import { HomeComponent } from './../home/home.component';
 import { CustomDesignComponent } from './../custom-design/custom-design.component';
 import { ViewProductComponent } from './../view-product/view-product.component';
 import { AboutComponent } from './../about/about.component';
+import { AuthFilter } from '../helpers/AuthFilter';
 
 
 
@@ -40,12 +41,18 @@ const routes: Routes = [
     component: AboutComponent,
   },
   {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
     path: 'admin',
     component: AdminComponent,
+    canActivate: [AuthFilter],
   },
   {
     path: 'admin/edit/:id',
     component: EditProductComponent,
+    canActivate: [AuthFilter],
   },
 ];
 

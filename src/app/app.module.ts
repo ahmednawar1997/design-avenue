@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
@@ -28,6 +28,9 @@ import { AdminComponent } from './admin/admin.component';
 import { CartService } from './cart.service';
 import { ProductService } from './product.service';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { LoginComponent } from './login/login.component';
+
+import { AuthInterceptor } from './auth.interceptor';
 
 
 
@@ -45,7 +48,8 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     ReviewsComponent,
     CartComponent,
     AdminComponent,
-    EditProductComponent
+    EditProductComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,9 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     ImageViewerModule.forRoot(),
     HttpClientModule
   ],
-  providers: [CartService, ProductService],
+  providers: [CartService, ProductService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
