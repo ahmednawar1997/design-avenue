@@ -74,21 +74,21 @@ export class ProductService {
 
 
   fetchProducts = (): Observable<any> => {
-    return this.http.get<any>('http://localhost:3000/api/products').pipe(catchError(this.errorHandler));;
+    return this.http.get<any>('http://localhost:3000/api/products').pipe(catchError(this.errorHandler));
   }
 
 
   fetchProductById = (id: number) => {
-    return this.http.get<any>('http://localhost:3000/api/products/' + id).pipe(catchError(this.errorHandler));;
+    return this.http.get<any>('http://localhost:3000/api/products/' + id).pipe(catchError(this.errorHandler));
   }
 
   addProduct = (product: any) => {
-    return this.http.post<any>('http://localhost:3000/api/products/add', product).pipe(catchError(this.errorHandler));;
+    return this.http.post<any>('http://localhost:3000/api/products/add', product).pipe(catchError(this.errorHandler));
   }
 
 
   removeProduct = (id: any) => {
-    return this.http.post<any>('http://localhost:3000/api/products/remove', { id }).pipe(catchError(this.errorHandler));;
+    return this.http.post<any>('http://localhost:3000/api/products/remove', { id }).pipe(catchError(this.errorHandler));
   }
 
   editProduct = (product: any) => {

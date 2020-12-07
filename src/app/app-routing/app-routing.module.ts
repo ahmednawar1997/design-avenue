@@ -10,7 +10,7 @@ import { HomeComponent } from './../home/home.component';
 import { CustomDesignComponent } from './../custom-design/custom-design.component';
 import { ViewProductComponent } from './../view-product/view-product.component';
 import { AboutComponent } from './../about/about.component';
-import { AuthFilter } from '../helpers/AuthFilter';
+import { AuthFilter } from '../helpers/auth.filter';
 
 
 

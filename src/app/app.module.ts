@@ -25,12 +25,12 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { CartComponent } from './cart/cart.component';
 import { AdminComponent } from './admin/admin.component';
 
-import { CartService } from './cart.service';
-import { ProductService } from './product.service';
+import { CartService } from './services/cart.service';
+import { ProductService } from './services/product.service';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { LoginComponent } from './login/login.component';
 
-import { AuthInterceptor } from './auth.interceptor';
+import { AuthInterceptor } from './helpers/auth.interceptor';
 
 
 
